@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GigMate AI Dashboard</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- ===================================
+            SIDEBAR
+==================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-robot"></i>
+
+        </div>
+
+        <div>
+
+            <h2>GigMate AI</h2>
+
+            <span>AI Copilot</span>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="#" class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            AI Insights
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            History
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Saved Places
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ===================================
+            MAIN CONTENT
+==================================== -->
+
+<div class="main-content">
+
+<header class="topbar">
+
+    <div>
+
+        <h1>
+
+            Welcome Back 👋
+
+        </h1>
+
+        <p>
+
+            Here is today's AI recommendation for you.
+
+        </p>
+
+    </div>
+
+    <div class="profile">
+
+        <div class="profile-icon">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===================================
+            USER INFO
+==================================== -->
+
+<section class="user-info">
+
+    <div class="info-card">
+
+        <i class="fa-solid fa-motorcycle"></i>
+
+        <div>
+
+            <span>Platform</span>
+
+            <h3 id="platformName">
+
+                Loading...
+
+            </h3>
+
+        </div>
+
+    </div>
+
+    <div class="info-card">
+
+        <i class="fa-solid fa-city"></i>
+
+        <div>
+
+            <span>City</span>
+
+            <h3 id="cityName">
+
+                Loading...
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================
+        AI RECOMMENDATION SECTION
+==================================== -->
+
+<section class="recommendation-section">
+
+    <div class="recommendation-card">
+
+        <div class="recommendation-header">
+
+            <div>
+
+                <span class="ai-badge">
+
+                    🤖 AI Recommendation
+
+                </span>
+
+                <h2>
+
+                    Best Work Plan For Today
+
+                </h2>
+
+            </div>
+
+            <button id="refreshAI">
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Refresh AI
+
+            </button>
+
+        </div>
+
+        <!-- Recommendation Grid -->
+
+        <div class="recommendation-grid">
+
+            <!-- Best Area -->
+
+            <div class="recommend-card">
+
+                <div class="recommend-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <span>
+
+                    Best Area
+
+                </span>
+
+                <h3 id="bestArea">
+
+                    Waiting for AI...
+
+                </h3>
+
+            </div>
+
+            <!-- Best Time -->
+
+            <div class="recommend-card">
+
+                <div class="recommend-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <span>
+
+                    Best Time
+
+                </span>
+
+                <h3 id="bestTime">
+
+                    Waiting for AI...
+
+                </h3>
+
+            </div>
+
+            <!-- Earnings -->
+
+            <div class="recommend-card">
+
+                <div class="recommend-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <span>
+
+                    Expected Earnings
+
+                </span>
+
+                <h3 id="expectedEarning">
+
+                    ₹ ---
+
+                </h3>
+
+            </div>
+
+            <!-- Confidence -->
+
+            <div class="recommend-card">
+
+                <div class="recommend-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <span>
+
+                    Confidence Score
+
+                </span>
+
+                <h3 id="confidenceScore">
+
+                    -- %
+
+                </h3>
+
+            </div>
+
+        </div>
+
+        <!-- AI Explanation -->
+
+        <div class="ai-reason">
+
+            <h3>
+
+                Why did AI recommend this?
+
+            </h3>
+
+            <p id="aiReason">
+
+                Your personalized recommendation will appear here after
+                AI completes its analysis using weather, traffic,
+                demand and historical trends.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================
+            LIVE ANALYTICS
+==================================== -->
+
+<section class="analytics-section">
+
+    <div class="section-title">
+
+        <h2>
+
+            Live Analytics
+
+        </h2>
+
+        <p>
+
+            Real-time insights powered by AI
+
+        </p>
+
+    </div>
+
+    <div class="analytics-grid">
+
+        <!-- Traffic -->
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon traffic">
+
+                <i class="fa-solid fa-road"></i>
+
+            </div>
+
+            <span>
+
+                Traffic Status
+
+            </span>
+
+            <h3 id="trafficStatus">
+
+                Loading...
+
+            </h3>
+
+            <small>
+
+                Updated every few minutes
+
+            </small>
+
+        </div>
+
+        <!-- Weather -->
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon weather">
+
+                <i class="fa-solid fa-cloud-sun"></i>
+
+            </div>
+
+            <span>
+
+                Weather
+
+            </span>
+
+            <h3 id="weatherStatus">
+
+                Loading...
+
+            </h3>
+
+            <small>
+
+                Current working condition
+
+            </small>
+
+        </div>
+
+        <!-- Demand -->
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon demand">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+            </div>
+
+            <span>
+
+                Demand Level
+
+            </span>
+
+            <h3 id="demandLevel">
+
+                Loading...
+
+            </h3>
+
+            <div class="meter">
+
+                <div class="meter-fill"
+                     id="demandMeter">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Earnings -->
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon earning">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <span>
+
+                Today's Potential
+
+            </span>
+
+            <h3 id="todayEarning">
+
+                ₹ ---
+
+            </h3>
+
+            <small>
+
+                Estimated by AI
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+            QUICK ACTIONS
+==================================== -->
+
+<section class="quick-actions">
+
+    <button class="action-btn">
+
+        <i class="fa-solid fa-location-crosshairs"></i>
+
+        Find Best Area
+
+    </button>
+
+    <button class="action-btn">
+
+        <i class="fa-solid fa-route"></i>
+
+        Plan Route
+
+    </button>
+
+    <button class="action-btn">
+
+        <i class="fa-solid fa-bell"></i>
+
+        Peak Hour Alerts
+
+    </button>
+
+    <button class="action-btn">
+
+        <i class="fa-solid fa-file-arrow-down"></i>
+
+        Export Report
+
+    </button>
+
+</section>
+<!-- ===================================
+            GIGMATE AI ASSISTANT
+==================================== -->
+
+<section class="assistant-section">
+
+    <div class="assistant-header">
+
+        <div class="assistant-title">
+
+            <div class="assistant-avatar">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <div>
+
+                <h2>
+
+                    GigMate AI Assistant
+
+                </h2>
+
+                <span>
+
+                    Online • Ready to Help
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="assistant-status">
+
+            <span class="live-dot"></span>
+
+            AI Active
+
+        </div>
+
+    </div>
+
+    <!-- Chat Window -->
+
+    <div class="chat-box" id="chatBox">
+
+        <!-- AI Message -->
+
+        <div class="message ai">
+
+            <div class="message-icon">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <div class="message-content">
+
+                <p>
+
+                    👋 Hello! I'm GigMate AI.
+
+                    Ask me anything about the best
+                    working area, earnings, demand,
+                    traffic or your daily plan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Suggestions -->
+
+    <div class="suggestions">
+
+        <button class="suggestion-btn">
+
+            Best area near me?
+
+        </button>
+
+        <button class="suggestion-btn">
+
+            Peak earning time?
+
+        </button>
+
+        <button class="suggestion-btn">
+
+            Is traffic heavy?
+
+        </button>
+
+        <button class="suggestion-btn">
+
+            Weather today?
+
+        </button>
+
+    </div>
+
+    <!-- Input -->
+
+    <div class="chat-input">
+
+        <input
+
+            type="text"
+
+            id="userMessage"
+
+            placeholder="Ask GigMate AI..."
+
+        >
+
+        <button id="sendMessage">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+            AI TYPING
+==================================== -->
+
+<div class="typing-box" id="typingBox">
+
+    <div class="typing-avatar">
+
+        <i class="fa-solid fa-robot"></i>
+
+    </div>
+
+    <div class="typing-animation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+</div>
+<!-- ===================================
+            SYSTEM STATUS
+==================================== -->
+
+<section class="system-status">
+
+    <div class="status-card">
+
+        <div class="status-icon">
+
+            <i class="fa-solid fa-server"></i>
+
+        </div>
+
+        <div>
+
+            <span>AI Engine</span>
+
+            <h4>Online</h4>
+
+        </div>
+
+    </div>
+
+    <div class="status-card">
+
+        <div class="status-icon">
+
+            <i class="fa-solid fa-database"></i>
+
+        </div>
+
+        <div>
+
+            <span>Data Source</span>
+
+            <h4>Connected</h4>
+
+        </div>
+
+    </div>
+
+    <div class="status-card">
+
+        <div class="status-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <div>
+
+            <span>Security</span>
+
+            <h4>Protected</h4>
+
+        </div>
+
+    </div>
+
+    <div class="status-card">
+
+        <div class="status-icon">
+
+            <i class="fa-solid fa-cloud"></i>
+
+        </div>
+
+        <div>
+
+            <span>Sync Status</span>
+
+            <h4>Ready</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================
+                FOOTER
+==================================== -->
+
+<footer class="dashboard-footer">
+
+    <div class="footer-left">
+
+        <h3>
+
+            GigMate AI
+
+        </h3>
+
+        <p>
+
+            AI-powered decision support for gig workers.
+
+        </p>
+
+    </div>
+
+    <div class="footer-right">
+
+        <div class="footer-item">
+
+            <span>
+
+                AI Version
+
+            </span>
+
+            <strong>
+
+                v1.0
+
+            </strong>
+
+        </div>
+
+        <div class="footer-item">
+
+            <span>
+
+                Last Updated
+
+            </span>
+
+            <strong id="lastUpdated">
+
+                Today
+
+            </strong>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</div>
+<!-- End Main Content -->
+
+
+<!-- ===================================
+            JAVASCRIPT
+==================================== -->
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

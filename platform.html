@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Select Platform | GigMate AI</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="platform.css">
+
+</head>
+
+<body>
+
+<!-- ===============================
+        BACKGROUND SHAPES
+================================ -->
+
+<div class="bg-circle circle-1"></div>
+<div class="bg-circle circle-2"></div>
+
+<!-- ===============================
+        MAIN CONTAINER
+================================ -->
+
+<div class="platform-container">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+        </div>
+
+        <div class="logo-text">
+
+            <h2>GigMate AI</h2>
+
+            <span>AI Copilot for Gig Workers</span>
+
+        </div>
+
+    </div>
+
+    <!-- Heading -->
+
+    <div class="page-header">
+
+        <span class="badge">
+
+            Step 1 of 2
+
+        </span>
+
+        <h1>
+
+            Select Your Work Platform
+
+        </h1>
+
+        <p>
+
+            Choose the platform you currently work with.
+            This helps GigMate AI provide personalized
+            earning recommendations.
+
+        </p>
+
+    </div>
+
+    <!-- Platform Grid -->
+
+    <div class="platform-grid">
+
+        <!-- Swiggy -->
+
+        <div class="platform-card"
+             data-platform="Swiggy">
+
+            <img src="images.jpeg"
+                 alt="Swiggy">
+
+            <h3>Swiggy</h3>
+
+            <p>Food Delivery</p>
+
+        </div>
+
+        <!-- Zomato -->
+
+        <div class="platform-card"
+             data-platform="Zomato">
+
+            <img src="zomato-app-logo-icon-hd-png-701751694968330repz0n4tud.png"
+                 alt="Zomato">
+
+            <h3>Zomato</h3>
+
+            <p>Food Delivery</p>
+
+        </div>
+
+        <!-- Uber -->
+
+        <div class="platform-card"
+             data-platform="Uber">
+
+            <img src="images.png"
+                 alt="Uber">
+
+            <h3>Uber</h3>
+
+            <p>Cab Service</p>
+
+        </div>
+
+        <!-- Ola -->
+
+        <div class="platform-card"
+             data-platform="Ola">
+
+            <img src="Ola-Cabs-Logo.png"
+                 alt="Ola">
+
+            <h3>Ola</h3>
+
+            <p>Cab Service</p>
+
+        </div>
+                <!-- Rapido -->
+
+        <div class="platform-card"
+             data-platform="Rapido">
+
+            <img src="Rapido-logo.png"
+                 alt="Rapido">
+
+            <h3>Rapido</h3>
+
+            <p>Bike Taxi</p>
+
+        </div>
+
+
+        <!-- Blinkit -->
+
+        <div class="platform-card"
+             data-platform="Blinkit">
+
+            <img src="Blinkit-yellow-rounded.svg.webp"
+                 alt="Blinkit">
+
+            <h3>Blinkit</h3>
+
+            <p>Instant Delivery</p>
+
+        </div>
+
+
+        <!-- Porter -->
+
+        <div class="platform-card"
+             data-platform="Porter">
+
+            <img src="Porter-logo.png"
+                 alt="Porter">
+
+            <h3>Porter</h3>
+
+            <p>Logistics</p>
+
+        </div>
+
+
+        <!-- Other -->
+
+        <div class="platform-card"
+             data-platform="Other">
+
+            <div class="other-icon">
+
+                <i class="fa-solid fa-plus"></i>
+
+            </div>
+
+            <h3>Other</h3>
+
+            <p>Select Later</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+            SELECTED PLATFORM
+    ================================ -->
+
+    <div class="selection-box">
+
+        <h4>
+
+            Selected Platform
+
+        </h4>
+
+        <p id="selectedPlatform">
+
+            No platform selected
+
+        </p>
+
+    </div>
+
+
+    <!-- ===============================
+            CONTINUE BUTTON
+    ================================ -->
+
+    <div class="button-area">
+
+        <button
+            id="continueBtn"
+            disabled>
+
+            Continue
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ===============================
+            FOOTER
+================================ -->
+
+<footer class="platform-footer">
+
+    <p>
+
+        Step 1 of 2 • Next: Select Your City
+
+    </p>
+
+</footer>
+
+
+<!-- ===============================
+            JAVASCRIPT
+================================ -->
+
+<script src="platform.js"></script>
+
+</body>
+
+</html>

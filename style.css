@@ -1,0 +1,1050 @@
+/* =====================================================
+        GIGMATE AI
+        LANDING PAGE
+        PART - 1
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+        RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Manrope',sans-serif;
+    background:#F6F3F4;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ===========================
+        VARIABLES
+=========================== */
+
+:root{
+
+    --primary:#7A1E3A;
+    --primaryDark:#5D152D;
+
+    --background:#F6F3F4;
+
+    --white:#ffffff;
+
+    --text:#222222;
+
+    --grey:#666666;
+
+    --border:#E8E2E5;
+
+    --shadow:0 20px 45px rgba(0,0,0,.08);
+
+    --radius:28px;
+
+}
+
+/* ===========================
+        CONTAINER
+=========================== */
+
+.container{
+
+    width:92%;
+
+    max-width:1250px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar{
+
+    padding:28px 0;
+
+    background:transparent;
+
+}
+
+.navContainer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+}
+
+.logoIcon{
+
+    width:58px;
+
+    height:58px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+}
+
+.logoText h2{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.logoText small{
+
+    color:var(--grey);
+
+    font-size:14px;
+
+}
+
+.loginBtn{
+
+    text-decoration:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.loginBtn:hover{
+
+    background:var(--primaryDark);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+        HERO
+=========================== */
+
+.hero{
+
+    padding:70px 0 90px;
+
+}
+
+.heroContainer{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* LEFT SIDE */
+
+.heroTag{
+
+    display:inline-block;
+
+    background:#F8E9EF;
+
+    color:var(--primary);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:26px;
+
+}
+
+.heroLeft h1{
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    margin-bottom:24px;
+
+    font-weight:800;
+
+}
+
+.heroLeft h1 span{
+
+    color:var(--primary);
+
+}
+
+.heroLeft p{
+
+    color:var(--grey);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    max-width:620px;
+
+}
+
+/* BUTTONS */
+
+.heroButtons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.primaryBtn{
+
+    text-decoration:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.primaryBtn:hover{
+
+    background:var(--primaryDark);
+
+    transform:translateY(-3px);
+
+}
+
+.secondaryBtn{
+
+    text-decoration:none;
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--border);
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.secondaryBtn:hover{
+
+    background:#F7F4F5;
+
+    transform:translateY(-3px);
+
+}
+/* =====================================================
+                FEATURES SECTION
+===================================================== */
+
+.features{
+
+    padding:90px 0;
+
+}
+
+.sectionTitle{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+}
+
+.sectionTitle h2{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+.sectionTitle p{
+
+    font-size:18px;
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+}
+
+/* Feature Grid */
+
+.featureGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* Feature Card */
+
+.featureCard{
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.featureCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(122,30,58,.12);
+
+}
+
+.featureIcon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F8E9EF;
+
+    color:var(--primary);
+
+    font-size:32px;
+
+}
+
+.featureCard h3{
+
+    font-size:24px;
+
+    margin-bottom:16px;
+
+    color:var(--text);
+
+}
+
+.featureCard p{
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+/* =====================================================
+                HOW IT WORKS
+===================================================== */
+
+.workflow{
+
+    padding:90px 0;
+
+}
+
+.workflowGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.stepCard{
+
+    position:relative;
+
+    background:var(--white);
+
+    border-radius:28px;
+
+    border:1px solid var(--border);
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.stepCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(122,30,58,.10);
+
+}
+
+/* Step Number */
+
+.stepNumber{
+
+    width:65px;
+
+    height:65px;
+
+    margin:auto;
+
+    margin-bottom:22px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#7A1E3A,#B44D73);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.stepCard h3{
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+    color:var(--text);
+
+}
+
+.stepCard p{
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* Arrow between cards */
+
+.stepCard:not(:last-child)::after{
+
+    content:"➜";
+
+    position:absolute;
+
+    right:-20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+/* =====================================================
+                    CTA SECTION
+===================================================== */
+
+.cta{
+
+    padding:90px 20px;
+
+}
+
+.cta .container{
+
+    background:linear-gradient(135deg,#7A1E3A,#A23661);
+
+    border-radius:35px;
+
+    padding:80px 60px;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Decorative Glow */
+
+.cta .container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-80px;
+
+}
+
+.cta .container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    left:-60px;
+
+    bottom:-60px;
+
+}
+
+.cta h2{
+
+    font-size:46px;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+    margin-bottom:35px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.cta .primaryBtn{
+
+    background:white;
+
+    color:var(--primary);
+
+    display:inline-flex;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.cta .primaryBtn:hover{
+
+    background:#F4ECEF;
+
+}
+
+
+
+/* =====================================================
+                        FOOTER
+===================================================== */
+
+footer{
+
+    padding:50px 0;
+
+    border-top:1px solid var(--border);
+
+}
+
+.footerContainer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.footerLogo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.footerLogo h3{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+.footerLogo p{
+
+    color:var(--grey);
+
+    font-size:14px;
+
+}
+
+footer small{
+
+    color:#777;
+
+}
+
+
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+.heroContainer{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.heroLeft{
+
+text-align:center;
+
+}
+
+.heroLeft p{
+
+margin:auto auto 35px;
+
+}
+
+.heroButtons{
+
+justify-content:center;
+
+}
+
+.heroRight{
+
+justify-content:center;
+
+}
+
+.featureGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.workflowGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stepCard::after{
+
+display:none;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.navContainer{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.hero{
+
+padding:50px 0;
+
+}
+
+.heroLeft h1{
+
+font-size:48px;
+
+}
+
+.heroLeft p{
+
+font-size:17px;
+
+}
+
+.heroButtons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.primaryBtn,
+
+.secondaryBtn{
+
+width:240px;
+
+justify-content:center;
+
+}
+
+.featureGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.workflowGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.sectionTitle h2{
+
+font-size:36px;
+
+}
+
+.cta .container{
+
+padding:60px 30px;
+
+}
+
+.cta h2{
+
+font-size:34px;
+
+}
+
+.footerContainer{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+
+
+
+@media(max-width:500px){
+
+.logoText h2{
+
+font-size:22px;
+
+}
+
+.logoIcon{
+
+width:50px;
+
+height:50px;
+
+font-size:20px;
+
+}
+
+.heroLeft h1{
+
+font-size:38px;
+
+}
+
+.assistantHeader{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.assistantAvatar{
+
+margin:auto;
+
+}
+
+.chatInput{
+
+flex-direction:column;
+
+}
+
+.chatInput input{
+
+width:100%;
+
+}
+
+.chatInput button{
+
+width:100%;
+
+border-radius:16px;
+
+}
+
+}
+
+
+
+/* =====================================================
+                    PREMIUM EFFECTS
+===================================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+a{
+
+transition:.3s ease;
+
+}
+
+button{
+
+font-family:'Manrope',sans-serif;
+
+cursor:pointer;
+
+}
+
+.featureCard,
+.stepCard,
+.assistantCard{
+
+transition:.35s;
+
+}
+
+.featureCard:hover,
+.stepCard:hover,
+.assistantCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+.hero{
+
+animation:fadeUp .8s ease;
+
+}
+
+.features{
+
+animation:fadeUp 1s ease;
+
+}
+
+.workflow{
+
+animation:fadeUp 1.2s ease;
+
+}
+
+.cta{
+
+animation:fadeUp 1.4s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}

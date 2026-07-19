@@ -1,0 +1,1287 @@
+/* ===========================================================
+                    GIGMATE AI LOGIN
+                        PART 1
+=========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+            RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#7A1E3A;
+    --primary-dark:#5E1630;
+    --secondary:#A53A64;
+
+    --background:#F8F6F7;
+    --white:#FFFFFF;
+
+    --text:#1E1E1E;
+    --grey:#6B6B6B;
+
+    --border:#ECE6E8;
+
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ==========================
+        BACKGROUND
+========================== */
+
+.bg-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(10px);
+
+    z-index:-1;
+
+}
+
+.circle-1{
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(165,58,100,.18);
+
+    top:-100px;
+
+    left:-100px;
+
+}
+
+.circle-2{
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(122,30,58,.12);
+
+    right:-80px;
+
+    top:120px;
+
+}
+
+.circle-3{
+
+    width:220px;
+
+    height:220px;
+
+    background:rgba(122,30,58,.10);
+
+    bottom:-70px;
+
+    left:45%;
+
+}
+
+/* ==========================
+        MAIN WRAPPER
+========================== */
+
+.login-wrapper{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:40px 0;
+
+}
+
+/* ==========================
+        LEFT PANEL
+========================== */
+
+.left-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:50px;
+
+}
+
+.logo-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.logo-text h2{
+
+    font-size:30px;
+
+    color:var(--primary);
+
+    font-weight:800;
+
+}
+
+.logo-text span{
+
+    font-size:14px;
+
+    color:var(--grey);
+
+}
+
+/* Hero Text */
+
+.tag{
+
+    display:inline-block;
+
+    background:#F7E8EE;
+
+    color:var(--primary);
+
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.hero-text h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero-text p{
+
+    max-width:520px;
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}
+/* ===========================================================
+                    FEATURE LIST
+=========================================================== */
+
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:20px;
+
+    padding:18px 22px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.05);
+
+}
+
+.feature-item:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:0 18px 40px rgba(122,30,58,.12);
+
+}
+
+.feature-item i{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.feature-item h3{
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+    font-weight:700;
+
+}
+
+.feature-item p{
+
+    color:var(--grey);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+/* ===========================================================
+                    AI PREVIEW CARD
+=========================================================== */
+
+.preview-card{
+
+    margin-top:20px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    box-shadow:0 25px 60px rgba(122,30,58,.12);
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+.preview-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.robot{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    font-size:34px;
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(122,30,58,.25);
+
+}
+
+.preview-header h3{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    margin-bottom:4px;
+
+}
+
+.preview-header span{
+
+    color:var(--grey);
+
+    font-size:14px;
+
+}
+
+.preview-message{
+
+    background:#FAF5F7;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    line-height:1.9;
+
+    color:#444;
+
+    font-size:15px;
+
+}
+
+/* Floating Animation */
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===========================================================
+                    RIGHT PANEL
+=========================================================== */
+
+.right-panel{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================
+        LOGIN CARD
+========================== */
+
+.login-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.85);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 25px 60px rgba(122,30,58,.12);
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.login-header h2{
+
+    font-size:36px;
+
+    color:var(--primary);
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.login-header p{
+
+    color:var(--grey);
+
+    font-size:16px;
+
+}
+
+/* ==========================
+        FORM
+========================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#F8F6F7;
+
+    border:2px solid transparent;
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    height:60px;
+
+    transition:.3s;
+
+}
+
+.input-box:focus-within{
+
+    border-color:var(--primary);
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(122,30,58,.08);
+
+}
+
+.input-box i{
+
+    color:var(--grey);
+
+    font-size:18px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding:0 15px;
+
+    font-size:16px;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+.input-box input::placeholder{
+
+    color:#999;
+
+}
+
+/* ==========================
+    SHOW PASSWORD BUTTON
+========================== */
+
+.toggle-password{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:var(--grey);
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.toggle-password:hover{
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+        OPTIONS
+========================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0 30px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+}
+
+.remember input{
+
+    accent-color:var(--primary);
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.options a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+        LOGIN BUTTON
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.35s;
+
+    margin-bottom:30px;
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(122,30,58,.25);
+
+}
+
+/* ==========================
+        DIVIDER
+========================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:30px 0;
+
+}
+
+.divider::before,
+
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:#DDD;
+
+}
+
+.divider span{
+
+    margin:0 15px;
+
+    color:#888;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+        GOOGLE BUTTON
+========================== */
+
+.google-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border:2px solid #ECECEC;
+
+    background:white;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.google-btn img{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+.google-btn:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+        REGISTER
+========================== */
+
+.register{
+
+    text-align:center;
+
+    margin-top:28px;
+
+}
+
+.register p{
+
+    color:var(--grey);
+
+}
+
+.register a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:800;
+
+}
+
+.register a:hover{
+
+    text-decoration:underline;
+
+}
+/* ===========================================================
+                    FOOTER
+=========================================================== */
+
+.login-footer{
+
+    width:100%;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:14px;
+
+    border-top:1px solid rgba(0,0,0,.06);
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.login-footer p{
+
+    letter-spacing:.3px;
+
+}
+
+
+/* ===========================================================
+                    RESPONSIVE
+=========================================================== */
+
+@media(max-width:1200px){
+
+.login-wrapper{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+padding:60px 0;
+
+}
+
+.left-panel{
+
+text-align:center;
+
+align-items:center;
+
+}
+
+.hero-text p{
+
+margin:auto;
+
+}
+
+.feature-list{
+
+width:100%;
+
+max-width:650px;
+
+}
+
+.preview-card{
+
+max-width:600px;
+
+width:100%;
+
+}
+
+.right-panel{
+
+width:100%;
+
+}
+
+.login-card{
+
+max-width:650px;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.login-wrapper{
+
+width:95%;
+
+padding:40px 0;
+
+}
+
+.hero-text h1{
+
+font-size:48px;
+
+}
+
+.hero-text p{
+
+font-size:16px;
+
+}
+
+.logo{
+
+justify-content:center;
+
+}
+
+.login-card{
+
+padding:35px 25px;
+
+}
+
+.options{
+
+flex-direction:column;
+
+gap:18px;
+
+align-items:flex-start;
+
+}
+
+.login-header h2{
+
+font-size:30px;
+
+}
+
+}
+
+
+@media(max-width:550px){
+
+.hero-text h1{
+
+font-size:38px;
+
+}
+
+.tag{
+
+font-size:13px;
+
+padding:8px 18px;
+
+}
+
+.logo-icon{
+
+width:54px;
+
+height:54px;
+
+font-size:20px;
+
+}
+
+.logo-text h2{
+
+font-size:24px;
+
+}
+
+.feature-item{
+
+padding:16px;
+
+gap:14px;
+
+}
+
+.feature-item i{
+
+width:48px;
+
+height:48px;
+
+font-size:18px;
+
+}
+
+.preview-card{
+
+padding:22px;
+
+}
+
+.preview-header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.login-card{
+
+padding:28px 20px;
+
+border-radius:22px;
+
+}
+
+.input-box{
+
+height:56px;
+
+}
+
+.login-btn{
+
+height:56px;
+
+}
+
+.google-btn{
+
+height:56px;
+
+font-size:15px;
+
+}
+
+.google-btn img{
+
+width:22px;
+
+height:22px;
+
+}
+
+.login-footer{
+
+font-size:12px;
+
+padding:18px;
+
+}
+
+}
+
+
+/* ===========================================================
+                    CUSTOM SCROLLBAR
+=========================================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#F4F4F4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+
+180deg,
+
+var(--primary),
+
+var(--secondary)
+
+);
+
+border-radius:20px;
+
+}
+
+
+/* ===========================================================
+                    TEXT SELECTION
+=========================================================== */
+
+::selection{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+
+/* ===========================================================
+                    SMOOTH TRANSITIONS
+=========================================================== */
+
+button,
+input,
+a,
+.feature-item,
+.preview-card,
+.login-card{
+
+transition:all .35s ease;
+
+}
+
+
+/* ===========================================================
+                    PAGE ANIMATION
+=========================================================== */
+
+.left-panel{
+
+animation:slideLeft .9s ease;
+
+}
+
+.right-panel{
+
+animation:slideRight .9s ease;
+
+}
+
+@keyframes slideLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes slideRight{
+
+from{
+
+opacity:0;
+
+transform:translateX(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+/* ===========================================================
+                    INPUT PLACEHOLDER
+=========================================================== */
+
+input::placeholder{
+
+color:#A0A0A0;
+
+}
+
+
+/* ===========================================================
+                    BUTTON ACTIVE EFFECT
+=========================================================== */
+
+.login-btn:active,
+.google-btn:active{
+
+transform:scale(.98);
+
+}
